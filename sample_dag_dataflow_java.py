@@ -18,14 +18,11 @@ default_args = {
     }
 }
 
-def cap_func():
-        return "hello Manjeet"   
-
-dag = DAG('dataflow-invoke', description='To invoke the Dataflow',
+dag = DAG('airflow-dataflow-invoke', description='To invoke the Dataflow',
           schedule_interval='@daily',
           start_date=datetime(2019, 3, 4), catchup=False, default_args=default_args)
 
-task1 = PythonOperator(task_id='hello_task', python_callable=cap_func, dag=dag)
+task1 = PythonOperator(task_id='python_hello_task', python_callable=hello_func, dag=dag)
 
 task2 = DataFlowJavaOperator(
     task_id='dataflow_invoke_task',
