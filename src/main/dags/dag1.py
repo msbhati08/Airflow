@@ -22,7 +22,7 @@ default_args = {
 dag = DAG('my_sample', description='To test the airflow using various operators',
           schedule_interval='@daily',
           start_date=datetime(2019, 3, 13), catchup=False, default_args=default_args)
-task1 = BashOperator(task_id="print_date", bash_command="date", dag=dag)
+task1 = BashOperator(task_id="print_date_task", bash_command="date", dag=dag)
 
 task2 = PythonOperator(task_id='python_hello_task', python_callable=hello_func, dag=dag)
 
@@ -40,7 +40,7 @@ task3 = DataFlowJavaOperator(
     dag=dag)
 
 task4 = MyOperator(my_operator_param='This is my operator.',
-                                task_id='my_first_operator_task', dag=dag)
+                                task_id='my_toperator_task', dag=dag)
 task1 >> task2 
 task2 >> task3
 task3 >> task4
