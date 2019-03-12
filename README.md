@@ -6,12 +6,12 @@ Use Airflow to author workflows as directed acyclic graphs (DAGs) of tasks. The 
 # Airflow Structure
 we will set airflow_home=/Airflow/src/main, Now under airflow_home
 
-airflow_home
-├── airflow.cfg
-├── airflow.db
-├── dags
-│   └── dag1.py            <- First DAG definition file
-│   └── dag2.py            <- Second DAG definition file
-├── plugins
-│   └── my_operators.py    <- Plugin file
-└── unittests.cfg
+airflow_home                                                                                                                               
+├── airflow.cfg                                                                                                                           
+├── airflow.db                                                                                                                             
+├── dags                                                                                                                                   
+│   └── dag1.py              <- First DAG definition file                                                                                 
+│   └── dag2.py              <- Second DAG definition file                                                                                 
+├── plugins                                                                                                                               
+│   └── my_operators.py    <- Plugin file                                                                                                 
+└── unittests.cfg                                                                                                                         
