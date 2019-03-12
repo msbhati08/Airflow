@@ -19,7 +19,7 @@ default_args = {
     }
 }
 
-dag = DAG('my-dag', description='To test the airflow using various operators',
+dag = DAG('my_sample', description='To test the airflow using various operators',
           schedule_interval='@daily',
           start_date=datetime(2019, 3, 13), catchup=False, default_args=default_args)
 task1 = BashOperator(task_id="print_date", bash_command="date", dag=dag)
