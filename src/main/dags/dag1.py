@@ -6,6 +6,10 @@ from airflow.contrib.operators.dataflow_operator import DataFlowJavaOperator
 from airflow.operators import MyOperator
 from google.cloud import storage
 
+def hello_func():
+    print ("hello Manjeet")
+    return "hello Manjeet" 
+
 default_args = {
     'owner': 'airflow',
     'depends_on_past': False,
